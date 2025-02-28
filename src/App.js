@@ -4,6 +4,7 @@ import Users from "./Users";
 import Users1 from "./Users1";
 import UserJSX from "./UserJSX";
 import Users3 from "./Users3";
+import Users4 from "./Users4";
 
 function App() {
   function handleClick() {
@@ -11,6 +12,7 @@ function App() {
   }
 
   let [data, setdata] = useState(1);
+  const [name, setName] = useState("Sachin");
 
   function changeState() {
     setdata(data + 1);
@@ -37,6 +39,12 @@ function App() {
       <br />
       7. UseState in Class Component
       <Users3 />
+      <br />
+      8. Use props in Functional Component
+      <Users4 name={name} />
+      <br />
+      <button onClick={() => setName("Santosh")}>Change Name</button>
+      <button onClick={() => setName("Anant")}>Change Name</button>
     </div>
   );
 }
