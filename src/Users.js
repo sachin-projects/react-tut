@@ -1,3 +1,4 @@
+//this component is functional component
 function Users() {
   return (
     <>
