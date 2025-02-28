@@ -3,7 +3,7 @@
 function UserJSX() {
   return (
     <div>
-      <h1>This is JSX</h1>
+      <h1>Example of JSX</h1>
     </div>
   );
 }
