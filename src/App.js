@@ -5,6 +5,7 @@ import Users1 from "./Users1";
 import UserJSX from "./UserJSX";
 import Users3 from "./Users3";
 import Users4 from "./Users4";
+import Users5 from "./Users5";
 
 function App() {
   function handleClick() {
@@ -45,8 +46,34 @@ function App() {
       <br />
       <button onClick={() => setName("Santosh")}>Change Name</button>
       <button onClick={() => setName("Anant")}>Change Name</button>
+      <br />
+      9. Use Props in Class Component
+      <Users5 name="Ramesh Kumar" />
+      <ClassBase name="Jaint Kumar" />
     </div>
   );
 }
 
 export default App;
+
+//class base commponent for prop
+export class ClassBase extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "",
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>{this.props.name}</h1>
+        <br />
+        <button onClick={() => this.setName("Kartik Kumar")}>
+          Change Name
+        </button>
+      </div>
+    );
+  }
+}
