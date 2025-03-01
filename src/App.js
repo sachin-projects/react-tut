@@ -58,10 +58,10 @@ export default App;
 
 //class base commponent for prop
 export class ClassBase extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      name: "Romesh",
+      name: this.props.name,
     };
   }
 
