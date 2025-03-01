@@ -61,16 +61,16 @@ export class ClassBase extends React.Component {
   constructor() {
     super();
     this.state = {
-      name: "",
+      name: "Romesh",
     };
   }
 
   render() {
     return (
       <div>
-        <h1>{this.props.name}</h1>
+        <h1>{this.state.name}</h1>
         <br />
-        <button onClick={() => this.setName("Kartik Kumar")}>
+        <button onClick={() => this.setState({ name: "Kartik Kumar" })}>
           Change Name
         </button>
       </div>
