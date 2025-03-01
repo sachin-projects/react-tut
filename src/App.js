@@ -14,9 +14,27 @@ function App() {
 
   let [data, setdata] = useState(1);
   const [name, setName] = useState("Sachin");
+  const [txt, settxt] = useState(null);
+  const [txtpo, setTxtpo] = useState(false);
+  const [status, setStatus] = useState(true);
+
+  let [frname, setFrname] = useState("");
+  let [tnc, setTnc] = useState(false);
+  let [gender, setGender] = useState("");
 
   function changeState() {
     setdata(data + 1);
+  }
+
+  function changeval(e) {
+    console.log(e.target.value);
+    settxt(e.target.value);
+    setTxtpo(false);
+  }
+
+  function submitform(e) {
+    e.preventDefault();
+    console.log(frname, tnc, gender);
   }
 
   return (
@@ -50,6 +68,56 @@ function App() {
       9. Use Props in Class Component
       <Users5 name="Ramesh Kumar" />
       <ClassBase name="Jaint Kumar" />
+      <br />
+      10. Get Input Box Value
+      <br />
+      <input type="text" onChange={changeval} />
+      <br />
+      <h1>show Text :{txtpo ? txt : null}</h1>
+      <button onClick={() => setTxtpo(true)}>Display Text</button>
+      <br />
+      11. show hide element / toggle effect
+      <br />
+      <h1>Hi,{status ? "Good Morining" : null}</h1>
+      <br />
+      <button onClick={() => setStatus(!status)}>Toogle</button>
+      <br />
+      12. Handle from
+      <br />
+      <form onSubmit={submitform}>
+        <input
+          type="text"
+          placeholder="Enter Name"
+          onChange={(e) => {
+            setFrname(e.target.value);
+          }}
+        />
+        <br />
+        <br />
+        <select
+          onChange={(e) => {
+            setGender(e.target.value);
+          }}
+        >
+          <option>--Pl. Select--</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+        <br />
+        <br />
+        <input
+          type="checkbox"
+          onChange={(e) => {
+            setTnc(e.target.checked);
+          }}
+        />
+        <br />
+        <br />
+        <button type="submit">Submit Form</button>
+      </form>
+      <br />
+      13. Conditional formating if else
     </div>
   );
 }
