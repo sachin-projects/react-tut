@@ -9,6 +9,7 @@ import Users5 from "./Users5";
 import UserLogin from "./UserLogin";
 import User6 from "./Users6";
 import Users7 from "./Users7";
+import Users8 from "./Users8";
 
 function App() {
   function handleClick() {
@@ -134,6 +135,11 @@ function App() {
       15. class life cycle (constructor)
       <br />
       <Users7 />
+      <br />
+      16. class life cycle (componentDidMount)
+      <br />
+      <Users8 />
+      <br />
     </div>
   );
 }
