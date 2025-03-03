@@ -7,6 +7,7 @@ import Users3 from "./Users3";
 import Users4 from "./Users4";
 import Users5 from "./Users5";
 import UserLogin from "./UserLogin";
+import User6 from "./Users6";
 
 function App() {
   function handleClick() {
@@ -36,6 +37,10 @@ function App() {
   function submitform(e) {
     e.preventDefault();
     console.log(frname, tnc, gender);
+  }
+
+  function parrentfun() {
+    alert("this msg form parent");
   }
 
   return (
@@ -120,6 +125,10 @@ function App() {
       <br />
       13. Conditional formating if else <br />
       <UserLogin login="2" />
+      <br />
+      14. call parent function to child Component
+      <br />
+      <User6 data={parrentfun} />
     </div>
   );
 }
