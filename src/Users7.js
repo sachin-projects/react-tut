@@ -10,6 +10,7 @@ class Users7 extends react.Component {
   }
   render() {
     console.log("render");
+    console.log(this);
     return <h1>this is class component {this.state.data}</h1>;
   }
 }

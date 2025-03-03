@@ -10,6 +10,7 @@ import UserLogin from "./UserLogin";
 import User6 from "./Users6";
 import Users7 from "./Users7";
 import Users8 from "./Users8";
+import Users9 from "./Users9";
 
 function App() {
   function handleClick() {
@@ -140,6 +141,8 @@ function App() {
       <br />
       <Users8 />
       <br />
+      17. class life cycle (componentDidUpdate)
+      <Users9 />
     </div>
   );
 }
