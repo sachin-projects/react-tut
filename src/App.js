@@ -8,6 +8,7 @@ import Users4 from "./Users4";
 import Users5 from "./Users5";
 import UserLogin from "./UserLogin";
 import User6 from "./Users6";
+import Users7 from "./Users7";
 
 function App() {
   function handleClick() {
@@ -129,6 +130,10 @@ function App() {
       14. call parent function to child Component
       <br />
       <User6 data={parrentfun} />
+      <br />
+      15. class life cycle (constructor)
+      <br />
+      <Users7 />
     </div>
   );
 }
