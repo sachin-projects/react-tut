@@ -13,6 +13,7 @@ import Users8 from "./Users8";
 import Users9 from "./Users9";
 import Users10 from "./Users10";
 import Users11 from "./users11";
+import { useEffect } from "react";
 
 function App() {
   function handleClick() {
@@ -24,10 +25,13 @@ function App() {
   const [txt, settxt] = useState(null);
   const [txtpo, setTxtpo] = useState(false);
   const [status, setStatus] = useState(true);
+  let [no, setNo] = useState(0);
 
   let [frname, setFrname] = useState("");
   let [tnc, setTnc] = useState(false);
   let [gender, setGender] = useState("");
+  let [d, setD] = useState(1);
+  let [p, setP] = useState(1);
 
   function changeState() {
     setdata(data + 1);
@@ -47,6 +51,14 @@ function App() {
   function parrentfun() {
     alert("this msg form parent");
   }
+
+  useEffect(() => {
+    console.log("Use Effect Hook Run as component did mount");
+  });
+
+  useEffect(() => {
+    console.log("update D State");
+  }, [d]);
 
   return (
     <div className="App">
@@ -157,6 +169,32 @@ function App() {
       <br />
       <h1>useState</h1>
       <br />
+      21. useEffect Hook
+      <br />
+      <h1>This is UseEffect Hook</h1>
+      <button
+        onClick={() => {
+          setNo(no + 1);
+        }}
+      >
+        Click for Update
+      </button>
+      22. UseEffect Hook update after state update and prop update
+      <h1>useEffect auto Call and call specific state and prop</h1>
+      <button
+        onClick={() => {
+          setD(d + 1);
+        }}
+      >
+        Click Button
+      </button>
+      <button
+        onClick={() => {
+          setP(p + 1);
+        }}
+      >
+        Click for p
+      </button>
     </div>
   );
 }
