@@ -14,6 +14,10 @@ import Users9 from "./Users9";
 import Users10 from "./Users10";
 import Users11 from "./users11";
 import { useEffect } from "react";
+import "./Style.css";
+import style from "./Custom.module.css";
+import { Button } from "react-bootstrap";
+import BootstrapAlert from "./BootstrapAlert";
 
 function App() {
   function handleClick() {
@@ -195,6 +199,26 @@ function App() {
       >
         Click for p
       </button>
+      <br />
+      23. use of css style in react
+      <h1 className="primary">use of css style in react</h1>
+      <h1 style={{ color: "blue", backgroundColor: "Yellow" }}>In Line Css</h1>
+      <h1 className={style.sucess}>use of css style in react</h1>
+      24. Use React Bootstrap Library
+      <br />
+      <Button onClick={() => alert("Hello")}>Click Me</Button>
+      <hr />
+      <BootstrapAlert />
+      <hr />
+      <Button variant="primary">Primary</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="success">Success</Button>
+      <Button variant="warning">Warning</Button>
+      <Button variant="danger">Danger</Button>
+      <Button variant="info">Info</Button>
+      <Button variant="light">Light</Button>
+      <Button variant="dark">Dark</Button>
+      <Button variant="link">Link</Button>
     </div>
   );
 }
