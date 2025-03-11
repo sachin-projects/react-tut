@@ -21,6 +21,7 @@ import BootstrapAlert from "./BootstrapAlert";
 import User15 from "./Users15";
 import usePlaceholder from "./../node_modules/react-bootstrap/esm/usePlaceholder";
 import Users16 from "./Users16";
+import Users17 from "./Users17";
 
 function App() {
   function handleClick() {
@@ -264,6 +265,10 @@ function App() {
       27. Send Data Child to Parent Component / Lifiting state
       <br />
       <Users16 data={exchangeData} />
+      <br />
+      28. Pour Componet use only in class
+      <br />
+      <Users17 />
     </div>
   );
 }
