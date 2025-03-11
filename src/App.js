@@ -64,6 +64,24 @@ function App() {
     console.log("update D State");
   }, [d]);
 
+  let student = [
+    {
+      Name: "Santosh",
+      email: "santosh@gmail.com",
+      Phone: "1234567890",
+    },
+    {
+      Name: "Sachin",
+      email: "sachin@gmail.com",
+      Phone: "1234567890",
+    },
+    {
+      Name: "Sandeep",
+      email: "sandeep@gmail.com",
+      Phone: "1234567890",
+    },
+  ];
+
   return (
     <div className="App">
       1.This is the first Program Hello world
@@ -219,6 +237,17 @@ function App() {
       <Button variant="light">Light</Button>
       <Button variant="dark">Dark</Button>
       <Button variant="link">Link</Button>
+      <br />
+      25. Use of MAP Function
+      {student.map((item) => {
+        return (
+          <h4>
+            Name = {item.Name}, Email = {item.email}, Phone = {item.Phone}
+          </h4>
+        );
+      })}
+      <br />
+      26. New
     </div>
   );
 }
