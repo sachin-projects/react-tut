@@ -19,6 +19,8 @@ import style from "./Custom.module.css";
 import { Button } from "react-bootstrap";
 import BootstrapAlert from "./BootstrapAlert";
 import User15 from "./Users15";
+import usePlaceholder from "./../node_modules/react-bootstrap/esm/usePlaceholder";
+import { UsePlaceholderProps } from "./../node_modules/react-bootstrap/cjs/usePlaceholder.d";
 
 function App() {
   function handleClick() {
@@ -253,6 +255,9 @@ function App() {
       {student.map((item) => {
         return <User15 data={item} />;
       })}
+      <br />
+      27. Send Data Child to Parent Component / Lifiting state
+      <br />
     </div>
   );
 }
