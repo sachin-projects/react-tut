@@ -18,6 +18,7 @@ import "./Style.css";
 import style from "./Custom.module.css";
 import { Button } from "react-bootstrap";
 import BootstrapAlert from "./BootstrapAlert";
+import User15 from "./Users15";
 
 function App() {
   function handleClick() {
@@ -247,7 +248,11 @@ function App() {
         );
       })}
       <br />
-      26. New
+      26. Re-useability of component
+      <br />
+      {student.map((item) => {
+        return <User15 data={item} />;
+      })}
     </div>
   );
 }
