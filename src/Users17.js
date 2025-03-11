@@ -1,5 +1,4 @@
 import react, { PureComponent } from "react";
-import { defult } from "./Users17";
 
 export default class Users17 extends react.Component {
   constructor() {
@@ -13,8 +12,12 @@ export default class Users17 extends react.Component {
     console.log("update");
     return (
       <>
-        <h1>Pure Component Example</h1>
-        <button onClick={() => this.setState({ count: 1 })}>
+        <h1>Pure Component Example = {this.props.data}</h1>
+        <button
+          onClick={() => {
+            alert(this.props.data);
+          }}
+        >
           Pure Component
         </button>
       </>

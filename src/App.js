@@ -41,6 +41,8 @@ function App() {
   let [d, setD] = useState(1);
   let [p, setP] = useState(1);
 
+  let [mytest, setMytest] = useState("test1");
+
   function changeState() {
     setdata(data + 1);
   }
@@ -268,7 +270,15 @@ function App() {
       <br />
       28. Pour Componet use only in class
       <br />
-      <Users17 />
+      <h1>Pure Component = {mytest}</h1>
+      <button
+        onClick={() => {
+          setMytest("test2");
+        }}
+      >
+        Send Prop to Pure Component
+      </button>
+      <Users17 data={mytest} />
     </div>
   );
 }
