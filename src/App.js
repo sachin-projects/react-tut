@@ -20,7 +20,7 @@ import { Button } from "react-bootstrap";
 import BootstrapAlert from "./BootstrapAlert";
 import User15 from "./Users15";
 import usePlaceholder from "./../node_modules/react-bootstrap/esm/usePlaceholder";
-import { UsePlaceholderProps } from "./../node_modules/react-bootstrap/cjs/usePlaceholder.d";
+import Users16 from "./Users16";
 
 function App() {
   function handleClick() {
@@ -84,6 +84,11 @@ function App() {
       Phone: "1234567890",
     },
   ];
+
+  function exchangeData(testdata) {
+    alert(testdata);
+    console.log(testdata);
+  }
 
   return (
     <div className="App">
@@ -258,6 +263,7 @@ function App() {
       <br />
       27. Send Data Child to Parent Component / Lifiting state
       <br />
+      <Users16 data={exchangeData} />
     </div>
   );
 }
