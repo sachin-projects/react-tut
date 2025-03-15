@@ -24,6 +24,7 @@ import Users16 from "./Users16";
 import Users17 from "./Users17";
 import Users18 from "./Users18";
 import Users19 from "./Users19";
+import HocComponent from "./HocComponent";
 
 function App() {
   function handleClick() {
@@ -298,6 +299,10 @@ function App() {
       <Users19 ref={inputRef} />
       <br />
       <button onClick={forwref}>Click Me</button>
+      <br />
+      31. HOC Component example
+      <br />
+      <HocComponent />
     </div>
   );
 }
