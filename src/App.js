@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Users from "./Users";
 import Users1 from "./Users1";
 import UserJSX from "./UserJSX";
@@ -23,6 +23,7 @@ import usePlaceholder from "./../node_modules/react-bootstrap/esm/usePlaceholder
 import Users16 from "./Users16";
 import Users17 from "./Users17";
 import Users18 from "./Users18";
+import Users19 from "./Users19";
 
 function App() {
   function handleClick() {
@@ -43,6 +44,8 @@ function App() {
   let [p, setP] = useState(1);
 
   let [mytest, setMytest] = useState("test1");
+
+  let inputRef = useRef(null);
 
   function changeState() {
     setdata(data + 1);
@@ -92,6 +95,11 @@ function App() {
   function exchangeData(testdata) {
     alert(testdata);
     console.log(testdata);
+  }
+
+  function forwref() {
+    inputRef.current.value = "111111";
+    alert("i am here");
   }
 
   return (
@@ -284,6 +292,12 @@ function App() {
       29. Use Ref Hook in react class
       <br />
       <Users18 />
+      <br />
+      30. Use forward ref
+      <br />
+      <Users19 ref={inputRef} />
+      <br />
+      <button onClick={forwref}>Click Me</button>
     </div>
   );
 }
