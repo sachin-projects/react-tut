@@ -308,6 +308,14 @@ function App() {
       32. Router example
       <br />
       <RouterSample />
+      <br />
+      33. Navigation with Router make Separte file for Link and add Router in
+      index.js with indusrial manner
+      <br />
+      34. 404 Page
+      <br />
+      35. Dinamic Routing with URL Params
+      <br />
     </div>
   );
 }
