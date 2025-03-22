@@ -27,6 +27,7 @@ import Users19 from "./Users19";
 import HocComponent from "./HocComponent";
 import RouterSample from "./RouterSample";
 import Users20 from "./Users20";
+import Users21 from "./Users21";
 
 function App() {
   function handleClick() {
@@ -318,6 +319,9 @@ function App() {
       35. Dinamic Routing with URL Params
       <br />
       <Users20 />
+      <br />
+      36. API Get Testing
+      <Users21 />
     </div>
   );
 }
